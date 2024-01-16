@@ -1,38 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CLRI - Kiosk Demo</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="./assets/css/style.css" />
-	</head>
-	<body>
-		<div class="main">
-			<div class="page-content">
-				<div class="video-player">
-					<video controls>
-						<source src="assets/img/samplevideo.mp4" type="video/mp4" />
-					</video>
-				</div>
-				<div class="sidebar"></div>
-			</div>
-			<div class="footer">
-				<a href="#" class="logo">
-					<img src="./assets/img/CLRI-logo-header.png" alt="CLRI logo" />
-					<p>CSIR-CLRI</p>
-				</a>
-				<div class="links">
-					<a href="#" target="_blank">External Link 1</a>
-					<a href="#" target="_blank">External Link 2</a>
-					<a href="#" target="_blank">External Link 3</a>
-					<a href="#" target="_blank">External Link 4</a>
-				</div>
-			</div>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CLRI - Kiosk Demo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="page-content">
+                <div class="video-player">
+                    <video controls poster="assets/img/poster.jpg">
+                        <source
+                            src="assets/img/samplevideo.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+                </div>
+                <div class="sidebar">
+                    <!-- List 1 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">01.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Whispering Sand Dunes</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 2 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">02.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Crimson Sunset Symphony</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 3 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">03.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Tangled Vines & Secrets</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 4 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">04.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Cosmic Tapestry Unfurled</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 5 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">05.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Emberlight's Silent Call</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 6 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">06.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Wind-Kissed Ocean</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 7 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">07.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Pixelated Dreamscapes</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 8 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">08.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Clockwork Heart's Rhythm</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 9 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">09.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Stardust Lullaby Whispers</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 10 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">10.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Ink-Stained Whispered</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 11 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">11.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Urban Jungle's Embrace</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 12 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">12.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Sun-Drenched Coral</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 13 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">13.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Silent Sanctuary Awakens</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 14 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">14.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Hidden Whispers Unveil</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- List 15 -->
+                    <a href="#" class="titlecard">
+                        <div class="left">
+                            <p class="number">15.</p>
+                            <img
+                                class="line-icon"
+                                src="./assets/img/line.svg"
+                            />
+                            <p class="title">Fractured City Lights</p>
+                        </div>
+                        <div class="right">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.93994 13.2802L10.2866 8.93355C10.7999 8.42021 10.7999 7.58021 10.2866 7.06688L5.93994 2.72021"
+                                    stroke="#5D566A"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#" class="logo">
+                    <img
+                        src="./assets/img/CLRI-logo-header.png"
+                        alt="CLRI logo"
+                    />
+                    <p>CSIR-CLRI</p>
+                </a>
+                <div class="links">
+                    <a href="#" target="_blank">External Link 1</a>
+                    <a href="#" target="_blank">External Link 2</a>
+                    <a href="#" target="_blank">External Link 3</a>
+                    <a href="#" target="_blank">External Link 4</a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

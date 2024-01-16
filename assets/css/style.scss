@@ -21,19 +21,19 @@ $semibold: 600;
 
 // Shadows
 $big-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08),
-	0px 0px 6px 0px rgba(0, 0, 0, 0.02);
+    0px 0px 6px 0px rgba(0, 0, 0, 0.02);
 
 /*
 General
 */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	background-color: $white;
+    background-color: $white;
 }
 
 h1,
@@ -43,74 +43,157 @@ h4,
 p,
 span,
 a {
-	font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 // Home - page
 .main {
-	width: 100%;
-	height: 100svh;
+    width: 100%;
+    height: 100svh;
 }
 
 .page-content {
-	width: 100%;
-	height: calc(100svh - 60px);
-	background: $background;
-	padding: 20px;
+    width: 100%;
+    height: calc(100svh - 60px);
+    background: $background;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5%;
 }
 
 .video-player {
-	width: 79.5%;
+    width: 79%;
 
-	video {
-		width: 100%;
-		// height: calc(100svh - 100px);
-		border-radius: 16px;
-	}
+    video {
+        width: 100%;
+        // height: calc(100svh - 100px);
+        border-radius: 16px;
+    }
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 9px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: #d7d7d7;
+    border-radius: 100px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    // border: 1px solid transparent;
+    background-clip: content-box;
+    background-color: $red;
+}
+
+.sidebar {
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: calc(100svh - 105px);
+    overflow-y: auto;
+    scrollbar-color: #d4aa70 #e4e4e4;
+    scrollbar-width: thin;
+
+    .titlecard {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        color: $text-titles;
+        background-color: $white;
+        padding: 18px 18px;
+        border-radius: 8px;
+        box-shadow: $big-box-shadow;
+        text-decoration: none;
+
+        .left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            .number {
+                font-size: 16px;
+                font-weight: $regular;
+                line-height: 1em;
+                letter-spacing: -0.5px;
+                font-family: "Fira Code", monospace;
+            }
+
+            .line-icon {
+                width: 1px;
+                height: 26px;
+            }
+
+            .title {
+                font-size: 16px;
+                font-weight: $regular;
+                line-height: 1em;
+                letter-spacing: -0.25px;
+                margin-left: 4px;
+            }
+        }
+
+        &:hover {
+            background-color: $primary;
+            color: $background;
+
+            .right {
+                svg {
+                    path {
+                        stroke: $background;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer {
-	width: 100%;
-	height: 60px;
-	background: $primary-alt;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 1.87rem;
+    width: 100%;
+    height: 60px;
+    background: $primary-alt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 1.87rem 0;
 
-	a.logo {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 10px;
-		text-decoration: none;
+    a.logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
 
-		img {
-			width: 20px;
-		}
+        img {
+            width: 20px;
+        }
 
-		p {
-			font-size: 0.8rem;
-			color: $white;
-			font-weight: $semibold;
-		}
-	}
+        p {
+            font-size: 0.8rem;
+            color: $white;
+            font-weight: $semibold;
+        }
+    }
 
-	.links {
-		display: flex;
-		flex-direction: row;
-		gap: 28px;
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
 
-		a {
-			font-size: 0.8rem;
-			text-decoration: none;
-			color: #d9d9d9;
-			letter-spacing: -0.15px;
+        a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: #d9d9d9;
+            letter-spacing: -0.15px;
 
-			&:hover {
-				color: $white;
-			}
-		}
-	}
+            &:hover {
+                color: $white;
+            }
+        }
+    }
 }
