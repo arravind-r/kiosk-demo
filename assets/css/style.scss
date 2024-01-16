@@ -2,39 +2,38 @@
 Variables
 */
 // Colors
-$primary: #2d1c46;
-$accent: #fbeccf;
-$alt-color: #b6d5f4;
+$primary: #463366;
+$primary-alt: #301e4e;
+$background: #fef6e4;
+$text-titles: #5d566a;
+$text-headings: #1f1235;
+$text-body: #665d74;
+$text-grey: #d9d9d9;
 $white: #ffffff;
-$surface-one: #f5f4f7;
-$text-headings: #1a1a1a;
-$text-body: #404040;
-$text-bodylight: #8c8c8c;
+$dark: #08050e;
+$grey: #989898;
+$red: #ff6e6c;
 
 // Weights
 $light: 300;
 $regular: 400;
-$bold: 700;
-
-// Spacing
-
-// Sizing
+$semibold: 600;
 
 // Shadows
-$big-box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+$big-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08),
+	0px 0px 6px 0px rgba(0, 0, 0, 0.02);
 
 /*
 General
 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: $white;
+	background-color: $white;
 }
 
 h1,
@@ -44,120 +43,74 @@ h4,
 p,
 span,
 a {
-    font-family: "Lato", sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
-// Main
+// Home - page
 .main {
-    width: 100%;
-    height: 100svh;
-    padding: 24px 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // gap: 3svh;
-
-    .top {
-        width: 100%;
-        height: 72svh;
-        border-radius: 8px;
-        // box-shadow: $big-box-shadow;
-        text-align: center;
-        padding: 0 0 24px 0;
-    }
-
-    .bottom {
-        height: 28svh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-top: 1px solid $alt-color;
-        border-radius: 10px;
-    }
+	width: 100%;
+	height: 100svh;
 }
 
-.top {
-    video {
-        height: 100%;
-        border-radius: 8px;
-    }
+.page-content {
+	width: 100%;
+	height: calc(100svh - 60px);
+	background: $background;
+	padding: 20px;
 }
 
-.bottom {
-    background-color: #f1edf8;
+.video-player {
+	width: 79.5%;
 
-    .nav-sec {
-        flex: 2;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        align-content: center;
-
-        a {
-            font-size: 1rem;
-            line-height: 1rem;
-            color: $white;
-            // color: $text-body;
-            background-color: transparent;
-            font-weight: $regular;
-            text-decoration: none;
-            border: 1px solid $alt-color;
-            padding: 14px 24px;
-            border-radius: 40px;
-
-            &:hover {
-                color: $white;
-                background-color: $primary;
-            }
-        }
-    }
+	video {
+		width: 100%;
+		// height: calc(100svh - 100px);
+		border-radius: 16px;
+	}
 }
 
-// Footer
 .footer {
-    // background-color: #f1edf8;
-    background-color: $primary;
-    border-radius: 8px;
-    padding: 16px 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	width: 100%;
+	height: 60px;
+	background: $primary-alt;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1.87rem;
 
-    .brand {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-        text-decoration: none;
+	a.logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+		text-decoration: none;
 
-        img {
-            width: 20px;
-        }
+		img {
+			width: 20px;
+		}
 
-        p {
-            font-size: 1rem;
-            color: $primary;
-            font-weight: $bold;
-        }
-    }
+		p {
+			font-size: 0.8rem;
+			color: $white;
+			font-weight: $semibold;
+		}
+	}
 
-    .links {
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
+	.links {
+		display: flex;
+		flex-direction: row;
+		gap: 28px;
 
-        a {
-            font-size: 0.95rem;
-            text-decoration: none;
-            color: $text-bodylight;
+		a {
+			font-size: 0.8rem;
+			text-decoration: none;
+			color: #d9d9d9;
+			letter-spacing: -0.15px;
 
-            &:hover {
-                color: $primary;
-            }
-        }
-    }
+			&:hover {
+				color: $white;
+			}
+		}
+	}
 }
