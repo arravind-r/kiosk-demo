@@ -1,16 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Slide 1</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../assets/css/slides.css" />
-    </head>
-    <body></body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slide 1</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+		<link rel="stylesheet" href="../assets/css/slides.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="page-content">
+				<div class="left">
+					<!-- <video controls poster="../assets/img/poster.jpg">
+						<source src="../assets/img/samplevideo.mp4" type="video/mp4" />
+					</video> -->
+					<video
+						id="player"
+						playsinline
+						controls
+						data-poster="../assets/img/poster.jpg">
+						<source src="../assets/img/samplevideo.mp4" type="video/mp4" />
+
+						<!-- Captions are optional -->
+						<!-- <track
+							kind="captions"
+							label="English captions"
+							src="/path/to/captions.vtt"
+							srclang="en"
+							default /> -->
+					</video>
+				</div>
+				<div class="right">
+					<div class="top">
+						<h2 class="title">01. Whispering Sand Dunes</h2>
+						<p class="desc">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo.
+						</p>
+						<p class="desc">
+							Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatu
+						</p>
+					</div>
+					<div class="bottom">
+						<a href="../index.html" class="home-btn">
+							<img src="../assets/img/home-icon.svg" alt="home-icon" />
+							<p>Home</p>
+						</a>
+
+						<div class="nav-btns">
+							<a class="btns prev-btn disabled">
+								<img src="../assets/img/prev-icon.svg" alt="prev-icon" />
+								<p>Prev</p>
+							</a>
+							<a href="#" class="btns next-btn">
+								<p>Next</p>
+								<img src="../assets/img/next-icon.svg" alt="next-icon" />
+							</a>
+						</div>
+
+						<a id="resetBtn" class="reset-btn">
+							<img src="../assets/img/reset-icon.svg" alt="reset-icon" />
+							<p>Reset</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<a href="#" class="logo">
+					<img src="../assets/img/CLRI-logo-header.png" alt="CLRI logo" />
+					<p>CSIR-CLRI</p>
+				</a>
+				<div class="links">
+					<a href="#" target="_blank">External Link 1</a>
+					<a href="#" target="_blank">External Link 2</a>
+					<a href="#" target="_blank">External Link 3</a>
+					<a href="#" target="_blank">External Link 4</a>
+				</div>
+			</div>
+		</div>
+		<div id="loading-screen">
+			<h4>Process Name</h4>
+			<h3>Hidden Whispers Unveil</h3>
+		</div>
+		<script src="../assets/js/loadingscreen.js"></script>
+		<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+		<script>
+			document
+				.getElementById("resetBtn")
+				.addEventListener("click", function () {
+					window.location.reload();
+				});
+		</script>
+
+		<script>
+			const player = new Plyr("#player");
+		</script>
+	</body>
 </html>
